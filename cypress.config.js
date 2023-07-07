@@ -3,7 +3,7 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
-    specPattern: "**/spec.cy.js",
+    specPattern: "**/*.cy.js",
     failOnStatusCode:false,
     baseUrl: 'https://gestion.apuestatotal.dev/',
     setupNodeEvents(on, config) {
