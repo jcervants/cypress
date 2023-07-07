@@ -47,9 +47,9 @@ describe("Serv. Técnico", () => {
   it.only("Atención Observaciones",() => {
     cy.visit("https://gestion.apuestatotal.dev/?sec_id=servicio_tecnico_observado&sub_sec_id=")   
   
-    // cy.window().then((newWin) => {
-    //   cy.get('#save_location_btn').click()
-    // })
+    cy.window().then((newWin) => {
+      cy.get('#save_location_btn').click()
+    })
 
     // cy.wait(1000)
     // //*[@id="200115"]/td[11]/a  
