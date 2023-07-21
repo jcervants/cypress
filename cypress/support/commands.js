@@ -1,20 +1,20 @@
 Cypress.Commands.add('login', () => {
-    cy.viewport(1440, 1024)
+    cy.viewport(1600, 1080)
 
     cy.visit("https://gestion.apuestatotal.dev/")
     cy.get('#username').type('jesus.cervantes')
     cy.get('#password').type('Kurax2023$$')
     cy.get('form').submit()
+})
 
-    // cy.window().then((newWin) => {
-    //     cy.get('#save_location_btn').click()
-    //   })
-  
-    // cy.wait(1000)
-      
-    // cy.window().then((newWin) => {
-    //     cy.get('.confirm').click()
-    // })
+
+Cypress.Commands.add('login_prod', () => {
+    cy.viewport(1600, 1080)
+
+    cy.visit("https://gestion.apuestatotal.com/")
+    cy.get('#username').type('jesus.cervantes')
+    cy.get('#password').type('Kurax2023$$')
+    cy.get('form').submit()
 })
 
 Cypress.Commands.add('login_sup', () => {
@@ -24,6 +24,24 @@ Cypress.Commands.add('login_sup', () => {
     cy.get('form').submit()
 
 })
+
+Cypress.Commands.add('login_comercial', () => {
+    cy.visit("https://gestion.apuestatotal.dev/")
+    cy.get('#username').type('jefecomercialuno.test')
+    cy.get('#password').type('123456')
+    cy.get('form').submit()
+
+})
+
+Cypress.Commands.add('login_finanzas', () => {
+    cy.visit("https://gestion.apuestatotal.dev/")
+    cy.get('#username').type('jefferson.vicharra')
+    cy.get('#password').type('123456')
+    cy.get('form').submit()
+
+})
+
+
 
 Cypress.Commands.add('login_ultron', () => {
     cy.viewport(1440, 1024)
